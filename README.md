@@ -1,0 +1,3 @@
+# redux-saga-maybe-worker
+
+To be written...

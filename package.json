@@ -1,0 +1,53 @@
+{
+    "name": "redux-saga-maybe-worker",
+    "version": "1.0.0",
+    "description": "Promise/Monad inspired utility wrapper for better sagas",
+    "keywords": [
+        "redux",
+        "saga",
+        "redux-saga",
+        "routines",
+        "redux-saga-routines",
+        "redux-form"
+    ],
+    "main": "dist/index.js",
+    "module": "es/index.js",
+    "jsnext:main": "es/index.js",
+    "devDependencies": {
+        "@babel/cli": "^7.1.2",
+        "@babel/core": "^7.1.2",
+        "@babel/plugin-transform-runtime": "^7.1.0",
+        "@babel/preset-env": "^7.1.0",
+        "@babel/register": "^7.0.0",
+        "@babel/runtime": "^7.1.2",
+        "babel-eslint": "^8.1.0",
+        "chai": "^4.1.2",
+        "cross-env": "^5.1.5",
+        "eslint": "^4.19.1",
+        "eslint-plugin-babel": "^5.1.0",
+        "mocha": "^5.2.0",
+        "redux-saga": ">=0.15.0",
+        "rimraf": "^2.6.2",
+        "sinon": "^5.0.7"
+    },
+    "peerDependencies": {
+        "@babel/runtime": ">=7.0.0",
+        "redux-saga": ">=0.15.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:BohdanOther/redux-saga-maybe-worker.git"
+    },
+    "author": {
+        "name": "bother",
+        "email": "harpandguitar@gmail.com"
+    },
+    "scripts": {
+        "lint": "eslint ./{src,test}/**/*.{js,jsx}",
+        "build:cjs": "cross-env BABEL_ENV=development babel src/ --out-dir dist",
+        "build:es": "cross-env BABEL_ENV=es babel src/ --out-dir es",
+        "build": "npm run build:cjs && npm run build:es",
+        "prepublishOnly": "npm run build"
+    },
+    "license": "MIT"
+}
